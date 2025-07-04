@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureFlow - Advanced Access Control Systems</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand nav-logo" href="#">
+                <div class="logo-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <span>SecureFlow</span>
+            </a>
+            <button class="navbar-toggler nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav nav-menu ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#solutions">Solutions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#devices">Devices</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#integration">Integration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-cta ms-3">
+                    <button class="btn btn-demo">Get Demo</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row hero-container align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <div class="hero-badge animate-slide-up">
+                        <div class="badge-icon badge-rotate">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <span>Next-Generation Security</span>
+                        <div class="badge-glow"></div>
+                    </div>
+                    <h1 class="hero-title animate-slide-up">
+                        <span class="title-line">Advanced Access Control</span>
+                        <span class="title-line gradient-text typing-effect">System</span>
+                    </h1>
+                    <p class="hero-description animate-slide-up">
+                        Flexible, secure, and configurable systems for campus, enterprise, terminal, and high-security openings. 
+                            With facial recognition and hosted access control, only the right people get access to your premises.
+                    </p>
+                    <div class="hero-features d-flex flex-wrap gap-3 mb-4 animate-slide-up">
+                        <div class="feature-item feature-bounce">
+                            <i class="fas fa-user-shield feature-icon-pulse"></i>
+                            <span>Facial Recognition</span>
+                        </div>
+                        <div class="feature-item feature-bounce">
+                            <i class="fas fa-cloud feature-icon-pulse"></i>
+                            <span>Cloud Hosted</span>
+                        </div>
+                        <div class="feature-item feature-bounce">
+                            <i class="fas fa-chart-line feature-icon-pulse"></i>
+                            <span>Real-time Monitoring</span>
+                        </div>
+                    </div>
+                    <div class="hero-buttons d-flex flex-wrap gap-3 animate-slide-up">
+                        <button class="btn btn-primary btn-glow btn-pulse">
+                            <span>Explore Solutions</span>
+                            <i class="fas fa-arrow-right ms-2 arrow-move"></i>
+                        </button>
+                        <button class="btn btn-secondary">
+                            <i class="fas fa-play me-2 play-bounce"></i>
+                            <span>Watch Demo</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6 hero-visual">
+                    <div class="security-dashboard dashboard-float">
+                        <div class="dashboard-header">
+                            <div class="status-indicator status-pulse"></div>
+                            <span>System Active</span>
+                            <div class="signal-bars">
+                                <div class="bar bar-1"></div>
+                                <div class="bar bar-2"></div>
+                                <div class="bar bar-3"></div>
+                                <div class="bar bar-4"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Live Camera Feed -->
+                        <div class="camera-feed">
+                            <div class="feed-header">
+                                <i class="fas fa-video camera-blink"></i>
+                                <span>Live Feed</span>
+                                <div class="recording-dot"></div>
+                            </div>
+                            <div class="feed-content">
+                                <div class="feed-image" style="background: linear-gradient(45deg, #1a1a2e, #16213e); display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; height: 120px; border-radius: 8px;">
+                                    <i class="fas fa-user" style="font-size: 24px; opacity: 0.5;"></i>
+                                </div>
+                                <div class="scan-overlay">
+                                    <div class="scan-line"></div>
+                                    <div class="detection-box">
+                                        <div class="detection-corner tl"></div>
+                                        <div class="detection-corner tr"></div>
+                                        <div class="detection-corner bl"></div>
+                                        <div class="detection-corner br"></div>
+                                        <div class="detection-label">Face Detected</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="access-grid">
+                            <div class="access-point granted access-slide">
+                                <div class="access-icon">
+                                    <i class="fas fa-check-circle icon-spin-success"></i>
+                                </div>
+                                <div class="access-info">
+                                    <div class="access-name">Main Entrance</div>
+                                    <div class="access-status-text">Access Granted</div>
+                                </div>
+                                <div class="access-time">2 min ago</div>
+                            </div>
+                            <div class="access-point pending access-slide">
+                                <div class="access-icon">
+                                    <i class="fas fa-clock icon-tick"></i>
+                                </div>
+                                <div class="access-info">
+                                    <div class="access-name">Visitor Area</div>
+                                    <div class="access-status-text">Pending</div>
+                                </div>
+                                <div class="access-time">5 min ago</div>
+                            </div>
+                            <div class="access-point secure access-slide">
+                                <div class="access-icon">
+                                    <i class="fas fa-shield-alt icon-shield-glow"></i>
+                                </div>
+                                <div class="access-info">
+                                    <div class="access-name">Server Room</div>
+                                    <div class="access-status-text">Secured</div>
+                                </div>
+                                <div class="access-time">1 hr ago</div>
+                            </div>
+                        </div>
+                        
+                        <div class="live-feed">
+                            <div class="feed-item user-enter">
+                                <div class="user-avatar avatar-glow">
+                                    <div class="avatar-img" style="background: linear-gradient(135deg, var(--secondary-color), #fbbf24); border-radius: 50%; width: 100%; height: 100%;"></div>
+                                    <div class="online-indicator"></div>
+                                </div>
+                                <div class="feed-info">
+                                    <span class="user-name">John Doe</span>
+                                    <span class="access-time">2 min ago</span>
+                                    <span class="user-role">
+                                        <i class="fas fa-user-tie"></i>
+                                        Employee
+                                    </span>
+                                </div>
+                                <div class="access-status granted status-bounce">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Live Statistics -->
+                    <div class="live-stats mt-4">
+                        <div class="row g-2">
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <i class="fas fa-users stat-icon stat-bounce"></i>
+                                    <div class="stat-number" data-target="247">0</div>
+                                    <div class="stat-label">Active</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <i class="fas fa-shield-alt stat-icon stat-pulse"></i>
+                                    <div class="stat-number" data-target="12">0</div>
+                                    <div class="stat-label">Secured</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <i class="fas fa-clock stat-icon stat-rotate"></i>
+                                    <div class="stat-number" data-target="99">0</div>
+                                    <div class="stat-label">Uptime%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="floating-elements">
+                        <div class="float-card card-1 card-hover-3d">
+                            <div class="card-icon">
+                                <i class="fas fa-fingerprint icon-fingerprint-scan"></i>
+                            </div>
+                            <span>Biometric</span>
+                            <div class="signal-waves">
+                                <div class="wave wave-1"></div>
+                                <div class="wave wave-2"></div>
+                                <div class="wave wave-3"></div>
+                            </div>
+                        </div>
+                        <div class="float-card card-2 card-hover-3d">
+                            <div class="card-icon">
+                                <i class="fas fa-mobile-alt icon-phone-vibrate"></i>
+                            </div>
+                            <span>Mobile Access</span>
+                            <div class="card-particles">
+                                <div class="particle-dot"></div>
+                                <div class="particle-dot"></div>
+                                <div class="particle-dot"></div>
+                            </div>
+                        </div>
+                        <div class="float-card card-3 card-hover-3d">
+                            <div class="card-icon">
+                                <i class="fas fa-eye icon-eye-blink"></i>
+                            </div>
+                            <span>Facial Recognition</span>
+                            <div class="recognition-grid">
+                                <div class="grid-dot"></div>
+                                <div class="grid-dot"></div>
+                                <div class="grid-dot"></div>
+                                <div class="grid-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Security Building Illustration -->
+                    <div class="security-illustration">
+                        <div class="building-outline">
+                            <div class="building-floor floor-1">
+                                <div class="security-point point-pulse">
+                                    <i class="fas fa-video"></i>
+                                </div>
+                            </div>
+                            <div class="building-floor floor-2">
+                                <div class="security-point point-rotate">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                            </div>
+                            <div class="building-floor floor-3">
+                                <div class="security-point point-bounce">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-background">
+            <div class="animated-grid"></div>
+            <div class="rotating-gradient"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comprehensive Security Section -->
+    <section class="comprehensive-security py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <span class="section-badge badge-animate">Modern Security</span>
+                <h2 class="section-title-animate">Comprehensive Security for Modern Workplaces</h2>
+                <p class="section-description-animate">Electronic access control systems are essential security measures for organizations of any size.</p>
+            </div>
+            
+            <div class="row security-grid g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="security-card card-morph h-100">
+                        <div class="icon-container">
+                            <div class="card-icon">
+                                <i class="fas fa-ban icon-wobble"></i>
+                                <div class="icon-bg-effect"></div>
+                            </div>
+                        </div>
+                        <h3>Limit Unauthorized Access</h3>
+                        <p>Prevent unauthorized entry with advanced authentication methods and real-time access control.</p>
+                        <div class="card-glow"></div>
+                        <div class="security-illustration-mini">
+                            <div class="mini-illustration" style="background: linear-gradient(45deg, #ef4444, #dc2626); border-radius: 8px;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="security-card card-morph h-100">
+                        <div class="icon-container">
+                            <div class="card-icon">
+                                <i class="fas fa-eye icon-blink"></i>
+                                <div class="icon-bg-effect"></div>
+                            </div>
+                        </div>
+                        <h3>Real-time Monitoring</h3>
+                        <p>Monitor all entry and exit points in real-time with comprehensive activity tracking.</p>
+                        <div class="card-glow"></div>
+                        <div class="security-illustration-mini">
+                            <div class="mini-illustration" style="background: linear-gradient(45deg, #3b82f6, #2563eb); border-radius: 8px;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="security-card card-morph h-100">
+                        <div class="icon-container">
+                            <div class="card-icon">
+                                <i class="fas fa-clipboard-list icon-flip"></i>
+                                <div class="icon-bg-effect"></div>
+                            </div>
+                        </div>
+                        <h3>Detailed Access Logs</h3>
+                        <p>Maintain comprehensive audit trails with detailed access logs for compliance and security.</p>
+                        <div class="card-glow"></div>
+                        <div class="security-illustration-mini">
+                            <div class="mini-illustration" style="background: linear-gradient(45deg, #10b981, #059669); border-radius: 8px;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="security-card card-morph h-100">
+                        <div class="icon-container">
+                            <div class="card-icon">
+                                <i class="fas fa-users-shield icon-scale"></i>
+                                <div class="icon-bg-effect"></div>
+                            </div>
+                        </div>
+                        <h3>Enhanced Safety</h3>
+                        <p>Improve safety for both visitors and employees with intelligent access management.</p>
+                        <div class="card-glow"></div>
+                        <div class="security-illustration-mini">
+                            <div class="mini-illustration" style="background: linear-gradient(45deg, #f59e0b, #d97706); border-radius: 8px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Access Control Options -->
+    <section id="solutions" class="access-options py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <span class="section-badge badge-animate">Tailored Solutions</span>
+                <h2 class="section-title-animate">Access Control Options Tailored to You</h2>
+                <p class="section-description-animate">Choose from our comprehensive range of access control solutions designed for different business needs.</p>
+            </div>
+            
+            <div class="row options-container g-4">
+                <div class="col-lg-6">
+                    <div class="option-card option-hover-effect h-100">
+                        <div class="option-header">
+                            <div class="option-icon icon-3d">
+                                <i class="fas fa-building icon-building-grow"></i>
+                                <div class="icon-shadow"></div>
+                            </div>
+                            <div class="option-number number-glow">01</div>
+                        </div>
+                        <h3>Standalone Business Security</h3>
+                        <p>Perfect for small and medium-sized businesses with single-point entry requirements.</p>
+                        <ul class="option-features">
+                            <li class="feature-slide-in"><i class="fas fa-check feature-check-bounce"></i> Single-point entry control</li>
+                            <li class="feature-slide-in"><i class="fas fa-check feature-check-bounce"></i> No network infrastructure required</li>
+                            <li class="feature-slide-in"><i class="fas fa-check feature-check-bounce"></i> Upgradeable to networked models</li>
+                        </ul>
+                        <div class="option-hover-effect"></div>
+                        <div class="option-illustration">
+                            <div class="option-img" style="background: linear-gradient(45deg, #1f2937, #374151); border-radius: 12px;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="option-card option-hover-effect h-100">
+                        <div class="option-header">
+                            <div class="option-icon icon-3d">
+                                <i class="fas fa-cloud icon-cloud-float"></i>
+                                <div class="icon-shadow"></div>
+                            </div>
+                            <div class="option-number number-glow">02</div>
+                        </div>
+                        <h3>Hosted Access Control</h3>
+                        <p>Cloud-based interface for remote permission management across multiple sites.</p>
+                        <ul class="option-features">
+                            <li class="feature-slide-in"><i class="fas fa-check feature-check-bounce"></i> Remote access management</li>
+                            <li class="feature-slide-in"><i class="fas fa-check feature-check-bounce"></i> Multi-site monitoring</li>
+                            <li class="feature-slide-in"><i class="fas fa-check feature-check-bounce"></i> Automated reporting</li>
+                            <li class="feature-slide-in"><i class="fas fa-check feature-check-bounce"></i> No on-site servers required</li>
+                        </ul>
+                        <div class="option-hover-effect"></div>
+                        <div class="option-illustration">
+                            <div class="option-img" style="background: linear-gradient(45deg, #3b82f6, #2563eb); border-radius: 12px;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="option-card option-hover-effect h-100">
+                        <div class="option-header">
+                            <div class="option-icon icon-3d">
+                                <i class="fas fa-cogs icon-cogs-spin"></i>
+                                <div class="icon-shadow"></div>
+                            </div>
+                            <div class="option-number number-glow">03</div>
+                        </div>
+                        <h3>Managed Security Control</h3>
+                        <p>We handle maintenance, monitoring, and configuration for organizations without dedicated IT teams.</p>
+                        <ul class="option-features">
+                            <li class="feature-slide-in"><i class="fas fa-check feature-check-bounce"></i> Professional oversight</li>
+                            <li class="feature-slide-in"><i class="fas fa-check feature-check-bounce"></i> Prompt updates</li>
+                            <li class="feature-slide-in"><i class="fas fa-check feature-check-bounce"></i> 24/7 reliability</li>
+                        </ul>
+                        <div class="option-hover-effect"></div>
+                        <div class="option-illustration">
+                            <div class="option-img" style="background: linear-gradient(45deg, #10b981, #059669); border-radius: 12px;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="option-card option-hover-effect h-100">
+                        <div class="option-header">
+                            <div class="option-icon icon-3d">
+                                <i class="fas fa-user-friends icon-users-wave"></i>
+                                <div class="icon-shadow"></div>
+                            </div>
+                            <div class="option-number number-glow">04</div>
+                        </div>
+                        <h3>Visitor Management Control</h3>
+                        <p>Secure premises with real-time guest tracking and pre-approved visitor scheduling.</p>
+                        <ul class="option-features">
+                            <li class="feature-slide-in"><i class="fas fa-check feature-check-bounce"></i> Real-time guest tracking</li>
+                            <li class="feature-slide-in"><i class="fas fa-check feature-check-bounce"></i> Registration kiosks</li>
+                            <li class="feature-slide-in"><i class="fas fa-check feature-check-bounce"></i> ID verification</li>
+                            <li class="feature-slide-in"><i class="fas fa-check feature-check-bounce"></i> Pre-approved scheduling</li>
+                        </ul>
+                        <div class="option-hover-effect"></div>
+                        <div class="option-illustration">
+                            <div class="option-img" style="background: linear-gradient(45deg, #f59e0b, #d97706); border-radius: 12px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Services -->
+    <section id="integration" class="integration-services py-5">
+        <div class="container">
+            <div class="row integration-content align-items-center">
+                <div class="col-lg-6 integration-info">
+                    <span class="section-badge badge-animate">System Integration</span>
+                    <h2 class="section-title-animate">Full-System Integration Services</h2>
+                    <p class="section-description-animate">Connect your access control system with other physical security tools to create a unified, smart security network.</p>
+                    
+                    <div class="integration-benefits">
+                        <div class="benefit-item benefit-slide-in d-flex">
+                            <div class="benefit-icon me-3">
+                                <i class="fas fa-sync-alt icon-sync-spin"></i>
+                                <div class="icon-glow"></div>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Unified Security Network</h4>
+                                <p>All security systems work together seamlessly</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item benefit-slide-in d-flex">
+                            <div class="benefit-icon me-3">
+                                <i class="fas fa-tachometer-alt icon-gauge-spin"></i>
+                                <div class="icon-glow"></div>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Faster Response Times</h4>
+                                <p>Automated alerts and coordinated responses</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item benefit-slide-in d-flex">
+                            <div class="benefit-icon me-3">
+                                <i class="fas fa-robot icon-robot-move"></i>
+                                <div class="icon-glow"></div>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Reduced Manual Work</h4>
+                                <p>Automated processes and intelligent monitoring</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Integration Stats -->
+                    <div class="integration-stats mt-4">
+                        <div class="row g-2">
+                            <div class="col-4">
+                                <div class="stat-box">
+                                    <i class="fas fa-plug stat-icon icon-plug-connect"></i>
+                                    <div class="stat-value">50+</div>
+                                    <div class="stat-text">Integrations</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-box">
+                                    <i class="fas fa-clock stat-icon icon-clock-tick"></i>
+                                    <div class="stat-value">24/7</div>
+                                    <div class="stat-text">Monitoring</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-box">
+                                    <i class="fas fa-shield-alt stat-icon stat-pulse"></i>
+                                    <div class="stat-value">99.9%</div>
+                                    <div class="stat-text">Uptime</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 integration-visual">
+                    <div class="integration-hub hub-animate">
+                        <div class="center-rings">
+                            <div class="ring ring-1"></div>
+                            <div class="ring ring-2"></div>
+                            <div class="ring ring-3"></div>
+                        </div>
+                        <div class="hub-center center-pulse">
+                            <i class="fas fa-microchip chip-glow"></i>
+                            <span>Access Control Hub</span>
+                        </div>
+                        <div class="integration-node cctv node-float">
+                            <i class="fas fa-video"></i>
+                            <span>CCTV Systems</span>
+                            <div class="node-glow"></div>
+                        </div>
+                        <div class="integration-node alarm node-float">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>Alarm Systems</span>
+                            <div class="node-glow"></div>
+                        </div>
+                        <div class="integration-node biometric node-float">
+                            <i class="fas fa-fingerprint"></i>
+                            <span>Biometric Devices</span>
+                            <div class="node-glow"></div>
+                        </div>
+                        <div class="integration-node elevator node-float">
+                            <i class="fas fa-elevator"></i>
+                            <span>Elevator Access</span>
+                            <div class="node-glow"></div>
+                        </div>
+                        <div class="integration-node attendance node-float">
+                            <i class="fas fa-clock"></i>
+                            <span>Time Attendance</span>
+                            <div class="node-glow"></div>
+                        </div>
+                        
+                        <!-- Connection Lines -->
+                        <div class="connection-line line-pulse" style="transform: translate(-50%, -50%) rotate(0deg);"></div>
+                        <div class="connection-line line-pulse" style="transform: translate(-50%, -50%) rotate(72deg);"></div>
+                        <div class="connection-line line-pulse" style="transform: translate(-50%, -50%) rotate(144deg);"></div>
+                        <div class="connection-line line-pulse" style="transform: translate(-50%, -50%) rotate(216deg);"></div>
+                        <div class="connection-line line-pulse" style="transform: translate(-50%, -50%) rotate(288deg);"></div>
+                        
+                        <!-- Data Flow Animation -->
+                        <div class="data-flow">
+                            <div class="data-packet packet-1"></div>
+                            <div class="data-packet packet-2"></div>
+                            <div class="data-packet packet-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Devices -->
+    <section id="devices" class="featured-devices py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <span class="section-badge badge-animate">Featured Products</span>
+                <h2 class="section-title-animate">Advanced Access Control Devices</h2>
+                <p class="section-description-animate">Cutting-edge biometric and facial recognition terminals with AI-powered authentication</p>
+            </div>
+            
+            <div class="devices-showcase">
+                <div class="device-tabs d-flex justify-content-center gap-3 mb-5">
+                    <button class="tab-btn tab-glow active" data-tab="bionic">BioNIC Series</button>
+                    <button class="tab-btn tab-glow" data-tab="mvis">MVIS Series</button>
+                    <button class="tab-btn tab-glow" data-tab="portable">Portable Solutions</button>
+                </div>
+                
+                <div class="device-content">
+                    <!-- BioNIC Series -->
+                    <div class="tab-panel active" id="bionic">
+                        <div class="row device-grid g-4">
+                            <div class="col-lg-4">
+                                <div class="device-card device-hover-3d premium h-100">
+                                    <div class="device-image">
+                                        <div class="device-mockup device-glow">
+                                            <div class="device-lights">
+                                                <div class="light light-1"></div>
+                                                <div class="light light-2"></div>
+                                            </div>
+                                            <div class="screen screen-active">
+                                                <div class="face-scan">
+                                                    <div class="scan-frame"></div>
+                                                    <i class="fas fa-user"></i>
+                                                </div>
+                                                <div class="screen-reflection"></div>
+                                            </div>
+                                            <div class="device-shadow"></div>
+                                        </div>
+                                    </div>
+                                    <div class="device-info">
+                                        <div class="device-badge">Premium</div>
+                                        <h3>BioNIC F7</h3>
+                                        <p>Intelligent facial recognition terminal with advanced features</p>
+                                        <div class="device-specs">
+                                            <div class="spec-item">
+                                                <i class="fas fa-tv"></i>
+                                                <span>8" HD Capacitive Display</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <i class="fas fa-thermometer-half"></i>
+                                                <span>IR Temperature Detection</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <i class="fas fa-camera"></i>
+                                                <span>Dual-lens 3D Verification</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <i class="fas fa-mask"></i>
+                                                <span>Face Mask Detection</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4">
+                                <div class="device-card device-hover-3d h-100">
+                                    <div class="device-image">
+                                        <div class="device-mockup">
+                                            <div class="device-lights">
+                                                <div class="light light-green"></div>
+                                                <div class="light light-blue"></div>
+                                            </div>
+                                            <div class="screen screen-active">
+                                                <div class="temp-display">
+                                                    <span class="temp-value">36.5°C</span>
+                                                    <i class="fas fa-check-circle"></i>
+                                                </div>
+                                                <div class="screen-reflection"></div>
+                                            </div>
+                                            <div class="device-shadow"></div>
+                                        </div>
+                                    </div>
+                                    <div class="device-info">
+                                        <h3>BioNIC Lite</h3>
+                                        <p>Multimodal facial and temperature scanning for small offices</p>
+                                        <div class="device-specs">
+                                            <div class="spec-item">
+                                                <i class="fas fa-face-smile"></i>
+                                                <span>Facial Recognition</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <i class="fas fa-thermometer"></i>
+                                                <span>Temperature Screening</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4">
+                                <div class="device-card device-hover-3d h-100">
+                                    <div class="device-image">
+                                        <div class="device-mockup">
+                                            <div class="device-lights">
+                                                <div class="light light-1"></div>
+                                                <div class="light light-2"></div>
+                                            </div>
+                                            <div class="screen screen-active">
+                                                <div class="ai-indicator">
+                                                    <i class="fas fa-brain"></i>
+                                                    <span>AI Processing</span>
+                                                </div>
+                                                <div class="screen-reflection"></div>
+                                            </div>
+                                            <div class="device-shadow"></div>
+                                        </div>
+                                    </div>
+                                    <div class="device-info">
+                                        <h3>BioNIC F8</h3>
+                                        <p>AI-powered facial recognition with thermal scanning</p>
+                                        <div class="device-specs">
+                                            <div class="spec-item">
+                                                <i class="fas fa-robot"></i>
+                                                <span>AI-Powered Matching</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <i class="fas fa-bolt"></i>
+                                                <span>Real-time Processing</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- MVIS Series -->
+                    <div class="tab-panel" id="mvis">
+                        <div class="row device-grid g-4">
+                            <div class="col-lg-6">
+                                <div class="device-card device-hover-3d premium h-100">
+                                    <div class="device-image">
+                                        <div class="device-mockup device-glow">
+                                            <div class="device-lights">
+                                                <div class="light light-1"></div>
+                                                <div class="light light-2"></div>
+                                            </div>
+                                            <div class="screen screen-active">
+                                                <div class="thermal-view">
+                                                    <div class="thermal-gradient"></div>
+                                                    <span class="temp-reading">Normal</span>
+                                                </div>
+                                                <div class="screen-reflection"></div>
+                                            </div>
+                                            <div class="device-shadow"></div>
+                                        </div>
+                                    </div>
+                                    <div class="device-info">
+                                        <div class="device-badge">High Performance</div>
+                                        <h3>MVIS80</h3>
+                                        <p>High-performance terminal with advanced thermal recognition</p>
+                                        <div class="device-specs">
+                                            <div class="spec-item">
+                                                <i class="fas fa-microchip"></i>
+                                                <span>Six-core 64-bit CPU</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <i class="fas fa-camera"></i>
+                                                <span>Wide Dynamic Range Camera</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <i class="fas fa-shield-alt"></i>
+                                                <span>Oxidized Aluminum Housing</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6">
+                                <div class="device-card device-hover-3d h-100">
+                                    <div class="device-image">
+                                        <div class="device-mockup">
+                                            <div class="device-lights">
+                                                <div class="light light-green"></div>
+                                                <div class="light light-blue"></div>
+                                            </div>
+                                            <div class="screen screen-active">
+                                                <div class="fever-detection">
+                                                    <i class="fas fa-thermometer-half"></i>
+                                                    <span>±0.3°C Precision</span>
+                                                </div>
+                                                <div class="screen-reflection"></div>
+                                            </div>
+                                            <div class="device-shadow"></div>
+                                        </div>
+                                    </div>
+                                    <div class="device-info">
+                                        <h3>MVIS50</h3>
+                                        <p>All-in-one AI terminal with fever detection</p>
+                                        <div class="device-specs">
+                                            <div class="spec-item">
+                                                <i class="fas fa-thermometer-half"></i>
+                                                <span>±0.3°C Fever Detection</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <i class="fas fa-stopwatch"></i>
+                                                <span>&lt;0.5s Face Matching</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Portable Solutions -->
+                    <div class="tab-panel" id="portable">
+                        <div class="row device-grid g-4">
+                            <div class="col-lg-6">
+                                <div class="device-card device-hover-3d h-100">
+                                    <div class="device-image">
+                                        <div class="device-mockup">
+                                            <div class="device-lights">
+                                                <div class="light light-1"></div>
+                                                <div class="light light-2"></div>
+                                            </div>
+                                            <div class="screen screen-active">
+                                                <div class="qr-scanner">
+                                                    <div class="scan-lines"></div>
+                                                    <i class="fas fa-qrcode"></i>
+                                                </div>
+                                                <div class="screen-reflection"></div>
+                                            </div>
+                                            <div class="device-shadow"></div>
+                                        </div>
+                                    </div>
+                                    <div class="device-info">
+                                        <div class="device-badge">Rugged</div>
+                                        <h3>MOXA7</h3>
+                                        <p>Field-ready biometric device for mobile use</p>
+                                        <div class="device-specs">
+                                            <div class="spec-item">
+                                                <i class="fas fa-shield"></i>
+                                                <span>IP65 Rating</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <i class="fas fa-qrcode"></i>
+                                                <span>Barcode & QR Scanning</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6">
+                                <div class="device-card device-hover-3d h-100">
+                                    <div class="device-image">
+                                        <div class="device-mockup">
+                                            <div class="device-lights">
+                                                <div class="light light-green"></div>
+                                                <div class="light light-blue"></div>
+                                            </div>
+                                            <div class="screen screen-active">
+                                                <div class="aadhaar-logo">
+                                                    <i class="fas fa-id-card"></i>
+                                                    <span>UIDAI Compliant</span>
+                                                </div>
+                                                <div class="screen-reflection"></div>
+                                            </div>
+                                            <div class="device-shadow"></div>
+                                        </div>
+                                    </div>
+                                    <div class="device-info">
+                                        <h3>MFSTAB II</h3>
+                                        <p>UIDAI-compliant AEBAS terminal</p>
+                                        <div class="device-specs">
+                                            <div class="spec-item">
+                                                <i class="fas fa-fingerprint"></i>
+                                                <span>Aadhaar Fingerprint</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <i class="fas fa-wifi"></i>
+                                                <span>3G/4G/Wi-Fi Support</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Environment Solutions -->
+    <section class="environment-solutions py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <span class="section-badge badge-animate">Specialized Solutions</span>
+                <h2 class="section-title-animate">Access Solutions by Environment</h2>
+                <p class="section-description-animate">Tailored security solutions designed for specific environments and use cases</p>
+            </div>
+            
+            <div class="row environment-grid g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="environment-card enterprise h-100">
+                        <div class="card-background"></div>
+                        <div class="card-content">
+                            <div class="env-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h3>Enterprise Access Control</h3>
+                            <p>Enterprise-grade systems with centralized control and advanced analytics</p>
+                            <ul class="env-features">
+                                <li>Multi-site access control</li>
+                                <li>Advanced analytics & reporting</li>
+                                <li>Scalable to 100,000+ users</li>
+                                <li>Ideal for MNCs & data centers</li>
+                            </ul>
+                        </div>
+                        <div class="card-overlay"></div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="environment-card door-entry h-100">
+                        <div class="card-background"></div>
+                        <div class="card-content">
+                            <div class="env-icon">
+                                <i class="fas fa-door-open"></i>
+                            </div>
+                            <h3>Door Entry Systems</h3>
+                            <p>Prevent unauthorized access with intelligent door control systems</p>
+                            <ul class="env-features">
+                                <li>Individual & role-based access</li>
+                                <li>Complete entry logging</li>
+                                <li>Multi-door control support</li>
+                                <li>Flexible expansion options</li>
+                            </ul>
+                        </div>
+                        <div class="card-overlay"></div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="environment-card high-traffic h-100">
+                        <div class="card-background"></div>
+                        <div class="card-content">
+                            <div class="env-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3>High-Traffic Entry Control</h3>
+                            <p>Advanced crowd control for transportation hubs and public venues</p>
+                            <ul class="env-features">
+                                <li>High-speed turnstiles</li>
+                                <li>QR/RFID card readers</li>
+                                <li>Facial + thermal scanning</li>
+                                <li>Suitable for arenas & malls</li>
+                            </ul>
+                        </div>
+                        <div class="card-overlay"></div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="environment-card campus h-100">
+                        <div class="card-background"></div>
+                        <div class="card-content">
+                            <div class="env-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>Campus Access Control</h3>
+                            <p>Comprehensive security for educational and healthcare campuses</p>
+                            <ul class="env-features">
+                                <li>Multi-building control</li>
+                                <li>RFID & geo-fencing</li>
+                                <li>Emergency lockdown features</li>
+                                <li>Real-time alerts</li>
+                            </ul>
+                        </div>
+                        <div class="card-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <span class="section-badge badge-animate">Why SecureFlow</span>
+                <h2 class="section-title-animate">Why We Stand Out</h2>
+                <p class="section-description-animate">Trusted by government agencies, Fortune 500 companies, and SMBs worldwide</p>
+            </div>
+            
+            <div class="row standout-grid g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="standout-item text-center h-100">
+                        <div class="standout-icon mx-auto">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <h3>Custom-Built Solutions</h3>
+                        <p>Designed specifically to fit your facility, workflow, and compliance needs with tailored configurations.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="standout-item text-center h-100">
+                        <div class="standout-icon mx-auto">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Hardware + Software Expertise</h3>
+                        <p>Deep integration between devices and management platforms for seamless operation and control.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="standout-item text-center h-100">
+                        <div class="standout-icon mx-auto">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                        </div>
+                        <h3>Scalable Architecture</h3>
+                        <p>Start with one door and scale to thousands. Our systems grow with your business needs.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="standout-item text-center h-100">
+                        <div class="standout-icon mx-auto">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Trusted Partner</h3>
+                        <p>We serve government agencies, Fortune 500 companies, and SMBs with proven reliability and support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta-section py-5">
+        <div class="container">
+            <div class="row cta-content align-items-center">
+                <div class="col-lg-8 cta-info">
+                    <h2>Ready to Secure Your Premises?</h2>
+                    <p>Contact us for a demo or speak with our security architects. We'll assess your infrastructure and propose a tailored access control solution.</p>
+                    
+                    <div class="cta-features mb-4">
+                        <div class="cta-feature d-flex align-items-center mb-2">
+                            <i class="fas fa-check-circle me-3"></i>
+                            <span>Free Security Assessment</span>
+                        </div>
+                        <div class="cta-feature d-flex align-items-center mb-2">
+                            <i class="fas fa-check-circle me-3"></i>
+                            <span>Custom Solution Design</span>
+                        </div>
+                        <div class="cta-feature d-flex align-items-center mb-2">
+                            <i class="fas fa-check-circle me-3"></i>
+                            <span>Professional Installation</span>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-buttons d-flex flex-wrap gap-3">
+                        <button class="btn btn-primary large">
+                            <span>Get Free Demo</span>
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </button>
+                        <button class="btn btn-secondary large">
+                            <i class="fas fa-phone me-2"></i>
+                            <span>Call Now</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 cta-visual">
+                    <div class="row security-stats g-3">
+                        <div class="col-12">
+                            <div class="stat-card text-center">
+                                <div class="stat-number" data-target="99.9">0</div>
+                                <div class="stat-label">% Uptime</div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-card text-center">
+                                <div class="stat-number" data-target="500">0</div>
+                                <div class="stat-label">K+ Installations</div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-card text-center">
+                                <div class="stat-number" data-target="24">0</div>
+                                <div class="stat-label">/7 Support</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cta-background">
+            <div class="bg-pattern"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row footer-content">
+                <div class="col-lg-4 footer-brand">
+                    <div class="footer-logo mb-3 d-flex align-items-center">
+                        <div class="logo-icon me-2">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <span>SecureFlow</span>
+                    </div>
+                    <p>Leading the future of access control with innovative security solutions that protect what matters most.</p>
+                    <div class="social-links d-flex gap-3">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-8">
+                    <div class="row footer-links">
+                        <div class="col-md-3">
+                            <h4>Solutions</h4>
+                            <a href="#" class="d-block">Enterprise Control</a>
+                            <a href="#" class="d-block">Campus Security</a>
+                            <a href="#" class="d-block">Door Entry Systems</a>
+                            <a href="#" class="d-block">Visitor Management</a>
+                        </div>
+                        <div class="col-md-3">
+                            <h4>Products</h4>
+                            <a href="#" class="d-block">BioNIC Series</a>
+                            <a href="#" class="d-block">MVIS Terminals</a>
+                            <a href="#" class="d-block">Portable Devices</a>
+                            <a href="#" class="d-block">Integration Tools</a>
+                        </div>
+                        <div class="col-md-3">
+                            <h4>Services</h4>
+                            <a href="#" class="d-block">System Integration</a>
+                            <a href="#" class="d-block">Managed Security</a>
+                            <a href="#" class="d-block">Technical Support</a>
+                            <a href="#" class="d-block">Training Programs</a>
+                        </div>
+                        <div class="col-md-3">
+                            <h4>Company</h4>
+                            <a href="#" class="d-block">About Us</a>
+                            <a href="#" class="d-block">Case Studies</a>
+                            <a href="#" class="d-block">Careers</a>
+                            <a href="#" class="d-block">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            <div class="row footer-bottom align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 SecureFlow. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-legal">
+                        <a href="#" class="me-3">Privacy Policy</a>
+                        <a href="#" class="me-3">Terms of Service</a>
+                        <a href="#">Security</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
