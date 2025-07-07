@@ -49,13 +49,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentScrollY = window.scrollY
 
     if (currentScrollY > 100) {
-      navbar.style.background = "rgba(255, 255, 255, 0.98)"
-      navbar.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.1)"
-      navbar.style.borderBottom = "1px solid rgba(0, 0, 0, 0.1)"
+      navbar.style.background = "rgba(248, 250, 252, 0.98)"
+      navbar.style.boxShadow = "0 4px 20px rgba(30, 64, 175, 0.1)"
+      navbar.style.borderBottom = "1px solid rgba(30, 64, 175, 0.1)"
     } else {
-      navbar.style.background = "rgba(255, 255, 255, 0.95)"
+      navbar.style.background = "rgba(248, 250, 252, 0.95)"
       navbar.style.boxShadow = "none"
-      navbar.style.borderBottom = "1px solid rgba(255, 255, 255, 0.1)"
+      navbar.style.borderBottom = "1px solid rgba(30, 64, 175, 0.1)"
     }
 
     // Hide/show navbar on scroll
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".access-point").forEach((point) => {
     point.addEventListener("mouseenter", function () {
       this.style.transform = "translateX(8px) scale(1.02)"
-      this.style.boxShadow = "0 8px 16px rgba(0, 0, 0, 0.2)"
+      this.style.boxShadow = "0 8px 16px rgba(30, 64, 175, 0.2)"
     })
 
     point.addEventListener("mouseleave", function () {
@@ -122,13 +122,13 @@ document.addEventListener("DOMContentLoaded", () => {
     card.addEventListener("mouseenter", function () {
       this.style.animationPlayState = "paused"
       this.style.transform = "translateY(-25px) scale(1.05)"
-      this.style.boxShadow = "0 15px 30px rgba(0, 0, 0, 0.3)"
+      this.style.boxShadow = "0 15px 30px rgba(30, 64, 175, 0.3)"
     })
 
     card.addEventListener("mouseleave", function () {
       this.style.animationPlayState = "running"
       this.style.transform = ""
-      this.style.boxShadow = "0 8px 16px rgba(0, 0, 0, 0.2)"
+      this.style.boxShadow = "0 8px 16px rgba(30, 64, 175, 0.2)"
     })
   })
 
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const statusDot = document.querySelector(".status-indicator")
   if (statusDot) {
     setInterval(() => {
-      statusDot.style.boxShadow = "0 0 20px rgba(16, 185, 129, 0.8)"
+      statusDot.style.boxShadow = "0 0 20px rgba(6, 182, 212, 0.8)"
       setTimeout(() => {
         statusDot.style.boxShadow = "none"
       }, 500)
@@ -495,7 +495,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 position: absolute;
                 width: 4px;
                 height: 4px;
-                background: rgba(37, 99, 235, 0.3);
+                background: rgba(30, 64, 175, 0.3);
                 border-radius: 50%;
                 animation: particleFloat ${5 + Math.random() * 10}s linear infinite;
                 left: ${Math.random() * 100}%;
@@ -557,12 +557,12 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".integration-node").forEach((node) => {
     node.addEventListener("mouseenter", () => {
       node.style.transform = "scale(1.1)"
-      node.style.background = "rgba(255, 255, 255, 0.2)"
+      node.style.background = "rgba(59, 130, 246, 0.25)"
     })
 
     node.addEventListener("mouseleave", () => {
       node.style.transform = "scale(1)"
-      node.style.background = "rgba(255, 255, 255, 0.1)"
+      node.style.background = "rgba(59, 130, 246, 0.15)"
     })
   })
 
@@ -627,4 +627,267 @@ document.addEventListener("DOMContentLoaded", () => {
 
   console.log("SecureFlow Access Control System - Complete Enhanced Version Loaded Successfully!")
   console.log("Features: Advanced animations, live effects, 3D interactions, particle systems, and responsive design")
+})
+
+// Enhanced Card Tilt Effects
+function initCardTiltEffects() {
+  const tiltCards = document.querySelectorAll(".card-tilt")
+
+  tiltCards.forEach((card) => {
+    card.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect()
+      const x = e.clientX - rect.left
+      const y = e.clientY - rect.top
+      const centerX = rect.width / 2
+      const centerY = rect.height / 2
+
+      // Calculate tilt based on corner proximity
+      const rotateX = (y - centerY) / 10
+      const rotateY = (centerX - x) / 10
+
+      // Enhanced tilt for corners
+      const cornerMultiplier = getCornerMultiplier(x, y, rect.width, rect.height)
+
+      card.style.transform = `
+        perspective(1000px) 
+        rotateX(${rotateX * cornerMultiplier}deg) 
+        rotateY(${rotateY * cornerMultiplier}deg) 
+        translateZ(10px)
+      `
+
+      // Add glow cursor effect
+      const glowCursor = card.querySelector(".glow-cursor")
+      if (glowCursor) {
+        glowCursor.style.left = x + "px"
+        glowCursor.style.top = y + "px"
+      }
+    })
+
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "perspective(1000px) rotateX(0) rotateY(0) translateZ(0)"
+    })
+
+    // Add click interaction
+    card.addEventListener("click", (e) => {
+      createParticleExplosion(e.clientX, e.clientY, card)
+    })
+  })
+}
+
+function getCornerMultiplier(x, y, width, height) {
+  const cornerThreshold = 0.3
+  const isNearLeftEdge = x < width * cornerThreshold
+  const isNearRightEdge = x > width * (1 - cornerThreshold)
+  const isNearTopEdge = y < height * cornerThreshold
+  const isNearBottomEdge = y > height * (1 - cornerThreshold)
+
+  if ((isNearLeftEdge || isNearRightEdge) && (isNearTopEdge || isNearBottomEdge)) {
+    return 2.5 // Corner areas get stronger tilt
+  } else if (isNearLeftEdge || isNearRightEdge || isNearTopEdge || isNearBottomEdge) {
+    return 1.8 // Edge areas get medium tilt
+  }
+  return 1 // Center areas get normal tilt
+}
+
+// Interactive Particle System
+function createParticleExplosion(x, y, container) {
+  const particles = []
+  const particleCount = 12
+
+  for (let i = 0; i < particleCount; i++) {
+    const particle = document.createElement("div")
+    particle.className = "particle"
+
+    const angle = (i / particleCount) * Math.PI * 2
+    const velocity = 50 + Math.random() * 50
+    const size = 3 + Math.random() * 4
+
+    particle.style.width = size + "px"
+    particle.style.height = size + "px"
+    particle.style.left = x + "px"
+    particle.style.top = y + "px"
+    particle.style.background = `hsl(${210 + Math.random() * 30}, 70%, 60%)`
+
+    container.appendChild(particle)
+
+    // Animate particle
+    const endX = x + Math.cos(angle) * velocity
+    const endY = y + Math.sin(angle) * velocity
+
+    particle.style.transform = `translate(${endX - x}px, ${endY - y}px)`
+    particle.style.opacity = "0"
+    particle.style.transition = "all 0.8s cubic-bezier(0.4, 0, 0.2, 1)"
+
+    setTimeout(() => {
+      particle.remove()
+    }, 800)
+  }
+}
+
+// Interactive Background Dots
+function initInteractiveBackground() {
+  const sections = document.querySelectorAll("section")
+
+  sections.forEach((section) => {
+    const interactiveBg = document.createElement("div")
+    interactiveBg.className = "interactive-bg"
+    section.style.position = "relative"
+    section.appendChild(interactiveBg)
+
+    section.addEventListener("mousemove", (e) => {
+      const rect = section.getBoundingClientRect()
+      const x = e.clientX - rect.left
+      const y = e.clientY - rect.top
+
+      // Create temporary dot
+      const dot = document.createElement("div")
+      dot.className = "bg-dot active"
+      dot.style.left = x + "px"
+      dot.style.top = y + "px"
+
+      interactiveBg.appendChild(dot)
+
+      setTimeout(() => {
+        dot.remove()
+      }, 1000)
+    })
+  })
+}
+
+// Enhanced Statistics Interaction
+function initInteractiveStats() {
+  const statItems = document.querySelectorAll(".stat-item, .stat-card, .stat-box")
+
+  statItems.forEach((stat) => {
+    stat.classList.add("stat-interactive")
+
+    stat.addEventListener("click", () => {
+      // Animate the number
+      const numberElement = stat.querySelector(".stat-number, .stat-value")
+      if (numberElement) {
+        const originalValue = numberElement.textContent
+        const targetValue = numberElement.getAttribute("data-target") || originalValue
+
+        // Create counting animation
+        animateCountUp(
+          numberElement,
+          0,
+          Number.parseFloat(targetValue),
+          originalValue.includes("%") ? "%" : originalValue.includes("K") ? "K+" : "",
+        )
+      }
+
+      // Add visual feedback
+      stat.style.transform = "scale(1.1)"
+      setTimeout(() => {
+        stat.style.transform = ""
+      }, 200)
+    })
+  })
+}
+
+function animateCountUp(element, start, end, suffix) {
+  const duration = 1000
+  const startTime = performance.now()
+
+  function update(currentTime) {
+    const elapsed = currentTime - startTime
+    const progress = Math.min(elapsed / duration, 1)
+
+    const current = start + (end - start) * easeOutCubic(progress)
+    element.textContent = Math.floor(current) + suffix
+
+    if (progress < 1) {
+      requestAnimationFrame(update)
+    }
+  }
+
+  requestAnimationFrame(update)
+}
+
+function easeOutCubic(t) {
+  return 1 - Math.pow(1 - t, 3)
+}
+
+// Enhanced Device Interactions
+function initDeviceInteractions() {
+  const deviceMockups = document.querySelectorAll(".device-mockup")
+
+  deviceMockups.forEach((device) => {
+    device.addEventListener("mouseenter", () => {
+      const lights = device.querySelectorAll(".light")
+      lights.forEach((light, index) => {
+        setTimeout(() => {
+          light.style.animation = "lightBlink 0.3s ease"
+        }, index * 100)
+      })
+
+      // Add screen glow effect
+      const screen = device.querySelector(".screen")
+      if (screen) {
+        screen.style.boxShadow = "0 0 30px rgba(59, 130, 246, 0.6)"
+      }
+    })
+
+    device.addEventListener("mouseleave", () => {
+      const screen = device.querySelector(".screen")
+      if (screen) {
+        screen.style.boxShadow = ""
+      }
+    })
+  })
+}
+
+// Magnetic Elements Effect
+function initMagneticElements() {
+  const magneticElements = document.querySelectorAll(".btn-primary, .btn-secondary, .nav-logo")
+
+  magneticElements.forEach((element) => {
+    element.classList.add("magnetic-element")
+
+    element.addEventListener("mousemove", (e) => {
+      const rect = element.getBoundingClientRect()
+      const x = e.clientX - rect.left - rect.width / 2
+      const y = e.clientY - rect.top - rect.height / 2
+
+      element.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px) scale(1.05)`
+    })
+
+    element.addEventListener("mouseleave", () => {
+      element.style.transform = ""
+    })
+  })
+}
+
+// Initialize all enhanced interactions
+document.addEventListener("DOMContentLoaded", () => {
+  // Wait for existing initialization to complete
+  setTimeout(() => {
+    initCardTiltEffects()
+    initInteractiveBackground()
+    initInteractiveStats()
+    initDeviceInteractions()
+    initMagneticElements()
+
+    console.log("Enhanced interactive features initialized!")
+  }, 1000)
+})
+
+// Add floating orbs to hero section
+function addFloatingOrbs() {
+  const heroVisual = document.querySelector(".hero-visual")
+  if (heroVisual) {
+    heroVisual.classList.add("hero-visual-enhanced")
+
+    for (let i = 1; i <= 4; i++) {
+      const orb = document.createElement("div")
+      orb.className = `floating-orb orb-${i}`
+      heroVisual.appendChild(orb)
+    }
+  }
+}
+
+// Initialize floating orbs
+window.addEventListener("load", () => {
+  addFloatingOrbs()
 })

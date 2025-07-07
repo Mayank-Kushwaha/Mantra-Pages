@@ -105,7 +105,7 @@
                                 <div class="recording-dot"></div>
                             </div>
                             <div class="feed-content">
-                                <div class="feed-image" style="background: linear-gradient(45deg, #1a1a2e, #16213e); display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; height: 120px; border-radius: 8px;">
+                                <div class="feed-image" style="background: linear-gradient(45deg, #0f172a, #1e293b); display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; height: 120px; border-radius: 8px;">
                                     <i class="fas fa-user" style="font-size: 24px; opacity: 0.5;"></i>
                                 </div>
                                 <div class="scan-overlay">
@@ -157,7 +157,7 @@
                         <div class="live-feed">
                             <div class="feed-item user-enter">
                                 <div class="user-avatar avatar-glow">
-                                    <div class="avatar-img" style="background: linear-gradient(135deg, var(--secondary-color), #fbbf24); border-radius: 50%; width: 100%; height: 100%;"></div>
+                                    <div class="avatar-img" style="background: linear-gradient(135deg, var(--secondary-color), #0284c7); border-radius: 50%; width: 100%; height: 100%;"></div>
                                     <div class="online-indicator"></div>
                                 </div>
                                 <div class="feed-info">
@@ -284,69 +284,117 @@
             
             <div class="row security-grid g-4">
                 <div class="col-lg-3 col-md-6">
-                    <div class="security-card card-morph h-100">
+                    <div class="security-card card-morph card-tilt h-100">
                         <div class="icon-container">
-                            <div class="card-icon">
-                                <i class="fas fa-ban icon-wobble"></i>
-                                <div class="icon-bg-effect"></div>
+                            <div class="card-icon complex-icon">
+                                <div class="icon-layers">
+                                    <div class="icon-layer icon-layer-3">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div class="icon-layer icon-layer-2">
+                                        <i class="fas fa-ban"></i>
+                                    </div>
+                                    <div class="icon-layer icon-layer-1">
+                                        <i class="fas fa-lock"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <h3>Limit Unauthorized Access</h3>
                         <p>Prevent unauthorized entry with advanced authentication methods and real-time access control.</p>
                         <div class="card-glow"></div>
-                        <div class="security-illustration-mini">
-                            <div class="mini-illustration" style="background: linear-gradient(45deg, #ef4444, #dc2626); border-radius: 8px;"></div>
+                        <div class="image-container security-illustration-mini">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=120&h=80&fit=crop&crop=center" alt="Security Access Control" class="live-image">
+                            <div class="image-overlay">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <div class="security-card card-morph h-100">
+                    <div class="security-card card-morph card-tilt h-100">
                         <div class="icon-container">
-                            <div class="card-icon">
-                                <i class="fas fa-eye icon-blink"></i>
-                                <div class="icon-bg-effect"></div>
+                            <div class="card-icon complex-icon">
+                                <div class="icon-layers">
+                                    <div class="icon-layer icon-layer-3">
+                                        <i class="fas fa-circle"></i>
+                                    </div>
+                                    <div class="icon-layer icon-layer-2">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                    <div class="icon-layer icon-layer-1">
+                                        <i class="fas fa-crosshairs"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <h3>Real-time Monitoring</h3>
                         <p>Monitor all entry and exit points in real-time with comprehensive activity tracking.</p>
                         <div class="card-glow"></div>
-                        <div class="security-illustration-mini">
-                            <div class="mini-illustration" style="background: linear-gradient(45deg, #3b82f6, #2563eb); border-radius: 8px;"></div>
+                        <div class="image-container security-illustration-mini">
+                            <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=120&h=80&fit=crop&crop=center" alt="Real-time Monitoring" class="live-image">
+                            <div class="image-overlay">
+                                <i class="fas fa-video"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <div class="security-card card-morph h-100">
+                    <div class="security-card card-morph card-tilt h-100">
                         <div class="icon-container">
-                            <div class="card-icon">
-                                <i class="fas fa-clipboard-list icon-flip"></i>
-                                <div class="icon-bg-effect"></div>
+                            <div class="card-icon complex-icon">
+                                <div class="icon-layers">
+                                    <div class="icon-layer icon-layer-3">
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                    <div class="icon-layer icon-layer-2">
+                                        <i class="fas fa-clipboard-list"></i>
+                                    </div>
+                                    <div class="icon-layer icon-layer-1">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <h3>Detailed Access Logs</h3>
                         <p>Maintain comprehensive audit trails with detailed access logs for compliance and security.</p>
                         <div class="card-glow"></div>
-                        <div class="security-illustration-mini">
-                            <div class="mini-illustration" style="background: linear-gradient(45deg, #10b981, #059669); border-radius: 8px;"></div>
+                        <div class="image-container security-illustration-mini">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=120&h=80&fit=crop&crop=center" alt="Access Logs Analytics" class="live-image">
+                            <div class="image-overlay">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <div class="security-card card-morph h-100">
+                    <div class="security-card card-morph card-tilt h-100">
                         <div class="icon-container">
-                            <div class="card-icon">
-                                <i class="fas fa-users-shield icon-scale"></i>
-                                <div class="icon-bg-effect"></div>
+                            <div class="card-icon complex-icon">
+                                <div class="icon-layers">
+                                    <div class="icon-layer icon-layer-3">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="icon-layer icon-layer-2">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div class="icon-layer icon-layer-1">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <h3>Enhanced Safety</h3>
                         <p>Improve safety for both visitors and employees with intelligent access management.</p>
                         <div class="card-glow"></div>
-                        <div class="security-illustration-mini">
-                            <div class="mini-illustration" style="background: linear-gradient(45deg, #f59e0b, #d97706); border-radius: 8px;"></div>
+                        <div class="image-container security-illustration-mini">
+                            <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=120&h=80&fit=crop&crop=center" alt="Enhanced Safety Systems" class="live-image">
+                            <div class="image-overlay">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -365,10 +413,20 @@
             
             <div class="row options-container g-4">
                 <div class="col-lg-6">
-                    <div class="option-card option-hover-effect h-100">
+                    <div class="option-card card-tilt h-100">
                         <div class="option-header">
-                            <div class="option-icon icon-3d">
-                                <i class="fas fa-building icon-building-grow"></i>
+                            <div class="option-icon icon-3d complex-icon">
+                                <div class="icon-layers">
+                                    <div class="icon-layer icon-layer-3">
+                                        <i class="fas fa-city"></i>
+                                    </div>
+                                    <div class="icon-layer icon-layer-2">
+                                        <i class="fas fa-building"></i>
+                                    </div>
+                                    <div class="icon-layer icon-layer-1">
+                                        <i class="fas fa-door-closed"></i>
+                                    </div>
+                                </div>
                                 <div class="icon-shadow"></div>
                             </div>
                             <div class="option-number number-glow">01</div>
@@ -381,17 +439,30 @@
                             <li class="feature-slide-in"><i class="fas fa-check feature-check-bounce"></i> Upgradeable to networked models</li>
                         </ul>
                         <div class="option-hover-effect"></div>
-                        <div class="option-illustration">
-                            <div class="option-img" style="background: linear-gradient(45deg, #1f2937, #374151); border-radius: 12px;"></div>
+                        <div class="image-container option-illustration">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=120&h=80&fit=crop&crop=center" alt="Standalone Business Security" class="option-img live-image">
+                            <div class="image-overlay">
+                                <i class="fas fa-building"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-lg-6">
-                    <div class="option-card option-hover-effect h-100">
+                    <div class="option-card card-tilt h-100">
                         <div class="option-header">
-                            <div class="option-icon icon-3d">
-                                <i class="fas fa-cloud icon-cloud-float"></i>
+                            <div class="option-icon icon-3d complex-icon">
+                                <div class="icon-layers">
+                                    <div class="icon-layer icon-layer-3">
+                                        <i class="fas fa-globe"></i>
+                                    </div>
+                                    <div class="icon-layer icon-layer-2">
+                                        <i class="fas fa-cloud"></i>
+                                    </div>
+                                    <div class="icon-layer icon-layer-1">
+                                        <i class="fas fa-server"></i>
+                                    </div>
+                                </div>
                                 <div class="icon-shadow"></div>
                             </div>
                             <div class="option-number number-glow">02</div>
@@ -405,17 +476,30 @@
                             <li class="feature-slide-in"><i class="fas fa-check feature-check-bounce"></i> No on-site servers required</li>
                         </ul>
                         <div class="option-hover-effect"></div>
-                        <div class="option-illustration">
-                            <div class="option-img" style="background: linear-gradient(45deg, #3b82f6, #2563eb); border-radius: 12px;"></div>
+                        <div class="image-container option-illustration">
+                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=120&h=80&fit=crop&crop=center" alt="Cloud Hosted Access Control" class="option-img live-image">
+                            <div class="image-overlay">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-lg-6">
-                    <div class="option-card option-hover-effect h-100">
+                    <div class="option-card card-tilt h-100">
                         <div class="option-header">
-                            <div class="option-icon icon-3d">
-                                <i class="fas fa-cogs icon-cogs-spin"></i>
+                            <div class="option-icon icon-3d complex-icon">
+                                <div class="icon-layers">
+                                    <div class="icon-layer icon-layer-3">
+                                        <i class="fas fa-tools"></i>
+                                    </div>
+                                    <div class="icon-layer icon-layer-2">
+                                        <i class="fas fa-cogs"></i>
+                                    </div>
+                                    <div class="icon-layer icon-layer-1">
+                                        <i class="fas fa-wrench"></i>
+                                    </div>
+                                </div>
                                 <div class="icon-shadow"></div>
                             </div>
                             <div class="option-number number-glow">03</div>
@@ -428,17 +512,30 @@
                             <li class="feature-slide-in"><i class="fas fa-check feature-check-bounce"></i> 24/7 reliability</li>
                         </ul>
                         <div class="option-hover-effect"></div>
-                        <div class="option-illustration">
-                            <div class="option-img" style="background: linear-gradient(45deg, #10b981, #059669); border-radius: 12px;"></div>
+                        <div class="image-container option-illustration">
+                            <img src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=120&h=80&fit=crop&crop=center" alt="Managed Security Services" class="option-img live-image">
+                            <div class="image-overlay">
+                                <i class="fas fa-headset"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-lg-6">
-                    <div class="option-card option-hover-effect h-100">
+                    <div class="option-card card-tilt h-100">
                         <div class="option-header">
-                            <div class="option-icon icon-3d">
-                                <i class="fas fa-user-friends icon-users-wave"></i>
+                            <div class="option-icon icon-3d complex-icon">
+                                <div class="icon-layers">
+                                    <div class="icon-layer icon-layer-3">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="icon-layer icon-layer-2">
+                                        <i class="fas fa-user-friends"></i>
+                                    </div>
+                                    <div class="icon-layer icon-layer-1">
+                                        <i class="fas fa-id-badge"></i>
+                                    </div>
+                                </div>
                                 <div class="icon-shadow"></div>
                             </div>
                             <div class="option-number number-glow">04</div>
@@ -452,8 +549,11 @@
                             <li class="feature-slide-in"><i class="fas fa-check feature-check-bounce"></i> Pre-approved scheduling</li>
                         </ul>
                         <div class="option-hover-effect"></div>
-                        <div class="option-illustration">
-                            <div class="option-img" style="background: linear-gradient(45deg, #f59e0b, #d97706); border-radius: 12px;"></div>
+                        <div class="image-container option-illustration">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=80&fit=crop&crop=center" alt="Visitor Management System" class="option-img live-image">
+                            <div class="image-overlay">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -469,6 +569,14 @@
                     <span class="section-badge badge-animate">System Integration</span>
                     <h2 class="section-title-animate">Full-System Integration Services</h2>
                     <p class="section-description-animate">Connect your access control system with other physical security tools to create a unified, smart security network.</p>
+                    
+                    <div class="image-container mb-4" style="height: 200px; border-radius: 16px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=200&fit=crop&crop=center" alt="Integration Network Diagram" class="live-image">
+                        <div class="image-overlay">
+                            <i class="fas fa-network-wired" style="font-size: 2rem;"></i>
+                            <span style="margin-top: 10px;">Live Integration</span>
+                        </div>
+                    </div>
                     
                     <div class="integration-benefits">
                         <div class="benefit-item benefit-slide-in d-flex">
@@ -503,7 +611,6 @@
                         </div>
                     </div>
                     
-                    <!-- Integration Stats -->
                     <div class="integration-stats mt-4">
                         <div class="row g-2">
                             <div class="col-4">
@@ -568,14 +675,12 @@
                             <div class="node-glow"></div>
                         </div>
                         
-                        <!-- Connection Lines -->
                         <div class="connection-line line-pulse" style="transform: translate(-50%, -50%) rotate(0deg);"></div>
                         <div class="connection-line line-pulse" style="transform: translate(-50%, -50%) rotate(72deg);"></div>
                         <div class="connection-line line-pulse" style="transform: translate(-50%, -50%) rotate(144deg);"></div>
                         <div class="connection-line line-pulse" style="transform: translate(-50%, -50%) rotate(216deg);"></div>
                         <div class="connection-line line-pulse" style="transform: translate(-50%, -50%) rotate(288deg);"></div>
                         
-                        <!-- Data Flow Animation -->
                         <div class="data-flow">
                             <div class="data-packet packet-1"></div>
                             <div class="data-packet packet-2"></div>
@@ -894,11 +999,21 @@
             
             <div class="row environment-grid g-4">
                 <div class="col-lg-3 col-md-6">
-                    <div class="environment-card enterprise h-100">
-                        <div class="card-background"></div>
+                    <div class="environment-card enterprise card-tilt h-100">
+                        <div class="card-background" style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.8)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300&h=400&fit=crop&crop=center'); background-size: cover; background-position: center;"></div>
                         <div class="card-content">
-                            <div class="env-icon">
-                                <i class="fas fa-building"></i>
+                            <div class="env-icon complex-icon">
+                                <div class="icon-layers">
+                                    <div class="icon-layer icon-layer-3">
+                                        <i class="fas fa-city"></i>
+                                    </div>
+                                    <div class="icon-layer icon-layer-2">
+                                        <i class="fas fa-building"></i>
+                                    </div>
+                                    <div class="icon-layer icon-layer-1">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
+                                </div>
                             </div>
                             <h3>Enterprise Access Control</h3>
                             <p>Enterprise-grade systems with centralized control and advanced analytics</p>
@@ -912,13 +1027,23 @@
                         <div class="card-overlay"></div>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-3 col-md-6">
-                    <div class="environment-card door-entry h-100">
-                        <div class="card-background"></div>
+                    <div class="environment-card door-entry card-tilt h-100">
+                        <div class="card-background" style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.8), rgba(8, 145, 178, 0.8)), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=400&fit=crop&crop=center'); background-size: cover; background-position: center;"></div>
                         <div class="card-content">
-                            <div class="env-icon">
-                                <i class="fas fa-door-open"></i>
+                            <div class="env-icon complex-icon">
+                                <div class="icon-layers">
+                                    <div class="icon-layer icon-layer-3">
+                                        <i class="fas fa-door-closed"></i>
+                                    </div>
+                                    <div class="icon-layer icon-layer-2">
+                                        <i class="fas fa-door-open"></i>
+                                    </div>
+                                    <div class="icon-layer icon-layer-1">
+                                        <i class="fas fa-key"></i>
+                                    </div>
+                                </div>
                             </div>
                             <h3>Door Entry Systems</h3>
                             <p>Prevent unauthorized access with intelligent door control systems</p>
@@ -932,13 +1057,23 @@
                         <div class="card-overlay"></div>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-3 col-md-6">
-                    <div class="environment-card high-traffic h-100">
-                        <div class="card-background"></div>
+                    <div class="environment-card high-traffic card-tilt h-100">
+                        <div class="card-background" style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.8), rgba(2, 132, 199, 0.8)), url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=300&h=400&fit=crop&crop=center'); background-size: cover; background-position: center;"></div>
                         <div class="card-content">
-                            <div class="env-icon">
-                                <i class="fas fa-users"></i>
+                            <div class="env-icon complex-icon">
+                                <div class="icon-layers">
+                                    <div class="icon-layer icon-layer-3">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="icon-layer icon-layer-2">
+                                        <i class="fas fa-walking"></i>
+                                    </div>
+                                    <div class="icon-layer icon-layer-1">
+                                        <i class="fas fa-tachometer-alt"></i>
+                                    </div>
+                                </div>
                             </div>
                             <h3>High-Traffic Entry Control</h3>
                             <p>Advanced crowd control for transportation hubs and public venues</p>
@@ -952,13 +1087,23 @@
                         <div class="card-overlay"></div>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-3 col-md-6">
-                    <div class="environment-card campus h-100">
-                        <div class="card-background"></div>
+                    <div class="environment-card campus card-tilt h-100">
+                        <div class="card-background" style="background: linear-gradient(135deg, rgba(30, 64, 175, 0.8), rgba(30, 58, 138, 0.8)), url('https://images.unsplash.com/photo-1562774053-701939374585?w=300&h=400&fit=crop&crop=center'); background-size: cover; background-position: center;"></div>
                         <div class="card-content">
-                            <div class="env-icon">
-                                <i class="fas fa-graduation-cap"></i>
+                            <div class="env-icon complex-icon">
+                                <div class="icon-layers">
+                                    <div class="icon-layer icon-layer-3">
+                                        <i class="fas fa-university"></i>
+                                    </div>
+                                    <div class="icon-layer icon-layer-2">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                    <div class="icon-layer icon-layer-1">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                </div>
                             </div>
                             <h3>Campus Access Control</h3>
                             <p>Comprehensive security for educational and healthcare campuses</p>
